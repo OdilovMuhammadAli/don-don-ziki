@@ -6,3 +6,4 @@ export const { rock, paper, scissors, lizard, spock } = {
   spock: "spock",
 };
 export const hands = [rock, paper, scissors, lizard, spock];
+export const handsHard = [rock, paper, scissors, lizard, spock];
