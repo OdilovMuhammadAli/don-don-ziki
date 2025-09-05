@@ -5,6 +5,8 @@ const elPlayer = document.getElementById("player");
 const elAi = document.getElementById("ai");
 const elRefreshGame = document.getElementById("refreshGame");
 const elStatus = document.getElementById("status");
+const elModeChangerButton = document.getElementById("modeChangerBtn");
+const elModeWrapper = document.getElementById("modeWrapper");
 
 export {
   elGameZone,
@@ -14,4 +16,6 @@ export {
   elAi,
   elRefreshGame,
   elStatus,
+  elModeChangerButton,
+  elModeWrapper,
 };
