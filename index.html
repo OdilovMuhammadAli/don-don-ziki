@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/output.css" />
     <title>don-don-ziki</title>
-
     <script src="./js/app.js" type="module"></script>
   </head>
   <body
@@ -34,7 +33,7 @@
       id="gameZone"
     >
       <div
-        class="grid grid-cols-2 gap-16 relative"
+        class="grid grid-cols-2 gap-16 relative group"
         data-mode="easy"
         id="modeWrapper"
       >
@@ -61,14 +60,14 @@
         </div>
         <div>
           <img
-            class="hand hidden cursor-pointer rounded-full bg-white p-4 shadow-lg hover:scale-105 transition"
+            class="hand hidden group-data-[mode=hard]:block cursor-pointer rounded-full bg-white p-4 shadow-lg hover:scale-105 transition"
             src="./images/spock.svg"
             alt="spock"
           />
         </div>
         <div>
           <img
-            class="hand hidden cursor-pointer rounded-full bg-white p-4 shadow-lg hover:scale-105 transition"
+            class="hand hidden group-data-[mode=hard]:block cursor-pointer rounded-full bg-white p-4 shadow-lg hover:scale-105 transition"
             src="./images/lizard.svg"
             alt="lizard"
           />
@@ -114,9 +113,9 @@
     </section>
     <button
       id="modeChangerBtn"
-      class="px-6 py-2 rounded-md border border-white text-black hover:bg-white transition absolute bottom-5 right-5"
+      class="px-6 py-2 rounded-md border border-white text-black hover:bg-white transition absolute bottom-5 left-5"
     >
-      easy
+      hard
     </button>
   </body>
 </html>

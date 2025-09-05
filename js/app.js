@@ -30,6 +30,7 @@ elHands.forEach((hand) => {
     }, 1000);
   });
 });
+
 elModeChangerButton.addEventListener("click", (evt) => {
   if (mode === "hard") {
     modeChanger("easy");
@@ -39,6 +40,6 @@ elModeChangerButton.addEventListener("click", (evt) => {
     evt.target.innerText = "easy";
   }
 });
-console.log(elModeWrapper);
+console.log(elModeWrapper.dataset);
 
 elRefreshGame.addEventListener("click", refreshGame);
