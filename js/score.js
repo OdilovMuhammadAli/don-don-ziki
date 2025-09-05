@@ -1,8 +1,13 @@
 let score = 0;
 
 export function updateScore(change) {
-  score += change;
-  document.getElementById("score").innerText = score;
+  score = Math.max(0, score + change);
+  const scoreElement = document.getElementById("score");
+  if (scoreElement) {
+    scoreElement.innerText = score;
+  } else {
+    console.warn('Element with id="score" not found');
+  }
 }
 
 export function getWinner(player, ai) {
@@ -20,13 +25,15 @@ export function getWinner(player, ai) {
 }
 
 export function handleResult(result) {
+  const statusElement = document.getElementById("status");
+
   if (result === "win") {
     updateScore(1);
-    document.getElementById("status").textContent = "YOU WIN";
+    if (statusElement) statusElement.textContent = "YOU WIN";
   } else if (result === "lose") {
     updateScore(-1);
-    document.getElementById("status").textContent = "YOU LOSE";
+    if (statusElement) statusElement.textContent = "YOU LOSE";
   } else {
-    document.getElementById("status").textContent = "DRAW";
+    if (statusElement) statusElement.textContent = "DRAW";
   }
 }
